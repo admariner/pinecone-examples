@@ -169,7 +169,7 @@ def main():
     st.write("# ML Q&A")
     search = st.container()
     query = search.text_input('Ask a framework-specific question!', "")
-    
+
     with search.expander("Search Options"):
         style = st.radio(label='Style', options=[
             'Paragraph about a question', 'Conservative Q&A',
@@ -254,7 +254,7 @@ def main():
     if search.button("Go!") or query != "":
         with st.spinner("Retrieving, please wait..."):
             # lowercase relevant lib filters
-            lib_meta = [lib.lower() for lib in lib_filters.keys() if lib_filters[lib]]
+            lib_meta = [lib.lower() for lib in lib_filters if lib_filters[lib]]
             # ask the question
             answer, sources = answer_question(
                 index, text_map,

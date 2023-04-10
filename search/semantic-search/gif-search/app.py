@@ -39,10 +39,7 @@ if query != "":
     with st.spinner(text="Similarity Searching..."):
         xq = retriever.encode([query]).tolist()
         xc = index.query(xq, top_k=30, include_metadata=True)
-        
-        urls = []
-        for context in xc['results'][0]['matches']:
-            urls.append(context['metadata']['url'])
 
+        urls = [context['metadata']['url'] for context in xc['results'][0]['matches']]
     with st.spinner(text="Fetching GIFs 🚀🚀🚀"):
         card(urls)
