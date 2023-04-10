@@ -15,7 +15,8 @@ index = init_pinecone()
 retriever = init_retriever()
 
 def card(thubmnail, title, url, context):
-    return st.markdown(f"""
+    return st.markdown(
+        f"""
     <div class="container-fluid">
         <div class="row align-items-start">
             <div class="col-md-4 col-sm-4">
@@ -27,12 +28,14 @@ def card(thubmnail, title, url, context):
                  <a href={url}>{title}</a>
                  <br>
                  <span style="color: #808080;">
-                     <small>{context[:200].capitalize()+"...."}</small>
+                     <small>{context[:200].capitalize()}....</small>
                  </span>
              </div>
         </div>
      </div>
-        """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
 
     
 st.write("""

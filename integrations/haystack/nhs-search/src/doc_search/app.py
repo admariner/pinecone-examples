@@ -32,8 +32,7 @@ def init_pipeline():
         model_name_or_path=READER_URL,
         context_window_size=500
     )
-    pipe = ExtractiveQAPipeline(reader, retriever)
-    return pipe
+    return ExtractiveQAPipeline(reader, retriever)
 
 st.markdown("""
 <link

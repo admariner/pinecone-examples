@@ -54,8 +54,7 @@ def chunks(lst, n):
 
 def get_top_sources(dataframe, n=20):
     """Return an iterable with the top n most frequent domains."""
-    sources = dataframe.domain.value_counts().head(n).index.tolist()
-    return sources
+    return dataframe.domain.value_counts().head(n).index.tolist()
 
 
 def get_processed_domain(df_row, sources):
@@ -67,8 +66,7 @@ def get_processed_domain(df_row, sources):
 def get_text_prefix(text, num_fragments_to_keep=5):
     """Return an abridged version of text."""
     fragmented_text = re.split(r'(?<=[.:;])\s', text)
-    abridged_text = " ".join(fragmented_text[:num_fragments_to_keep])
-    return abridged_text
+    return " ".join(fragmented_text[:num_fragments_to_keep])
 
 
 def get_processed_df(df):
