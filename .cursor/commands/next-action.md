@@ -17,10 +17,13 @@ Review the ticket description:
 - If no plan exists, draft a reasonable implementation plan based on the ticket 
   description and proceed with implementation.
 
-## Implement 
+## Implement
 
 - Create a new feature branch
-- Iterate by assessing the code against the criteria in .github/NOTEBOOK_REVIEW_TEMPLATE.md
+- Iterate by running quality review:
+  - validate-notebook skill: Technical validation (structure, pinning, secrets, links)
+  - review-notebook-writing skill: Writing style, voice, tone, and clarity
+  - check-deprecated-models skill: Check for deprecated AI models
 - Ensure the notebook has valid syntax
 - Format the notebook changed using uv to run ruff format on the notebook
 

@@ -20,10 +20,13 @@ Pull master to ensure you have the latest changes before beginning any implement
 When the fix is complete, the agent should:
 
 1. **Quality Review**
+   - Run validate-notebook skill: Technical validation (structure, pinning, secrets, links)
+   - Run review-notebook-writing skill: Writing style, voice, tone, and clarity
+   - Run check-deprecated-models skill: Check for deprecated AI models
    - Verify the notebook executes successfully from top to bottom
    - Ensure code follows Python best practices and is well-commented
    - Check that all markdown cells render correctly
-   - Score this notebook according to the criteria in .github/NOTEBOOK_REVIEW_TEMPLATE.md and implement fixes for any issues uncovered.
+   - Implement fixes for any issues uncovered.
 
 2. **Create Pull Request**
    - Create a PR with a title that follows Conventional Commits format
